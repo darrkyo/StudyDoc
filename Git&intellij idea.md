@@ -148,5 +148,66 @@
    push时候提示out of date
  
 	需要先进行$git pull命令之后在push
-   
+
+##8Git和Intellij Idea
+   这里我们把开发使用的IDE和Git结合，Intellij Idea本身是自带Git的，但是我们为什么需要换成自己的呢？
+
+   这是因为Intellij Idea自带的Git功能不全，仅有几个简单的功能，所以我们要换成自己已经搭建完成的Git，步骤如下
+
+**1.打开设置Setting**
+
+   ![1-17](./pics/1-17.png)
+
+**2.搜索Git**
+
+   ![1-18](./pics/1-18.png)
+
+   在这里把地址修改成本地下载好的Git.exe的目录点解接受
+   这样我们就将本地的Git整合到Intellij Idea当中了
+
+##9上传项目
+
+   首先，我们的项目是没有生成Git本地库的，所以我们需要先让他变成一个Git本地库
     
+   我们首先菜单里面的VCS项下面的Import into Version Control项的Create Git Reponsitory    
+
+   ![1-20](./pics/1-20.png)
+
+   这里选择我们自己的项目点击确定，这样我们的项目就已经变成一个Git本地库了
+
+   ![1-21](./pics/1-21.png)
+
+   在项目的右键菜单里面我们已经可以看到Git的选项了
+
+   ![1-22](./pics/1-22.png)
+
+   而项目目录我们也可以看到有文件变成红色了，说明该文件还没有被Git跟踪，接下来的步骤就跟Git Bash类似了
+   
+   ![1-23](./pics/1-23.png)
+
+   我们点击右键菜单Git里面的Add将文件跟踪
+
+   ![1-24](./pics/1-24.png)
+
+   然后我们点击菜单里面的Commit Directory将文件暂存
+
+   ![1-25](./pics/1-25.png)
+
+   弹出窗口是显示你要commit的文件，箭头位置是填写commit信息的
+
+   ![1-26](./pics/1-26.png)
+
+   然后我们就可以正常的Push和Pull操作了！
+
+   ![1-27](./pics/1-27.png)
+
+##10克隆项目
+
+   我们可以上传项目，我们也可以从Git仓库上直接克隆一个项目到本地
+   首先我们点击VCS菜单下面的Checkout from Version Control选项下面的Git
+
+   ![1-19](./pics/1-19.png)
+
+   然后就会弹出一个对话框，蓝色箭头位置填写的是要克隆的在线仓库，红色箭头位置填写你项目的名称，点击clone之后我们就可以从在线仓库克隆一个项目到本地了！
+
+   ![1-28](./pics/1-28.png)
